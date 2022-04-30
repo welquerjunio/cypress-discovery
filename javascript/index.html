@@ -9,9 +9,11 @@
     <h1>Olá, <span id="nome"></span></h1>
 
     <script type="text/javascript">
-        var nome = "Welquer";
-        var idade = 38;
-        var ativo = false;
+        var nome = prompt("Qual o seu nome?");
+        var recebeidade = prompt("Informe a sua idade");
+
+        var idade = parseInt(recebeidade);
+     
 
         console.log(nome);
         console.log(typeof nome);
@@ -19,12 +21,7 @@
         console.log(idade);
         console.log(typeof idade);
 
-        console.log(ativo);
-        console.log(typeof ativo);
-
         document.getElementById("nome").innerText = nome;
-
-
     </script>
 
     
