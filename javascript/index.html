@@ -6,22 +6,33 @@
     <title>Cypress Discovery</title>
 </head>
 <body>
-    <h1>Olá, <span id="nome"></span></h1>
+    <!-- <h1>Olá, <span id="nome"></span></h1> -->
+    <h1>CNH</h1>
+    <input name="nome" placeholder="Seu primeiro nome" />
+    <input idade="idade" placeholder="Sua idade" />
+    <button type="button" onclick="verificarIdade()">Verificar Idade</button>
 
     <script type="text/javascript">
-        var nome = prompt("Qual o seu nome?");
-        var recebeidade = prompt("Informe a sua idade");
 
-        var idade = parseInt(recebeidade);
+        function verificarIdade() {
+            var nome = document.querySelector('input[name=nome]')
+            var idade = document.querySelector('input[idade=idade]')
+            console.log(nome.value)
+            console.log(idade.value)
+        }
+        // var nome = prompt("Qual o seu nome?");
+        // var recebeidade = prompt("Informe a sua idade");
+
+        // var idade = parseInt(recebeidade);
      
 
-        console.log(nome);
-        console.log(typeof nome);
+        // console.log(nome);
+        // console.log(typeof nome);
 
-        console.log(idade);
-        console.log(typeof idade);
+        // console.log(idade);
+        // console.log(typeof idade);
 
-        document.getElementById("nome").innerText = nome;
+        // document.getElementById("nome").innerText = nome;
     </script>
 
     
