@@ -1,3 +1,5 @@
+// Teste de Cadastro de entregador
+
 describe('Cadastro', ()=>{
     it('Usuário deve se tornar um entregador', ()=>{
         cy.viewport(1440, 900)
@@ -18,8 +20,10 @@ describe('Cadastro', ()=>{
                 complemento: 'Ap 142',
                 bairro: 'Itaim Bibi',
                 cidade_uf: 'São Paulo/SP'
-            }
+            },
+            metodo_entrega: 'Moto'
         }
+
         cy.get('input[name="name"]').type(entregador.nome)
         cy.get('input[name="cpf"]').type(entregador.cpf)
         cy.get('input[name="email"]').type(entregador.email)
@@ -34,5 +38,7 @@ describe('Cadastro', ()=>{
         cy.get('input[name="address"]').should('have.value', entregador.endereco.rua)
         cy.get('input[name="district"]').should('have.value', entregador.endereco.bairro)
         cy.get('input[name="city-uf"]').should('have.value', entregador.endereco.cidade_uf)
+
+        cy.contains('.delivery-method li', entregador.metodo_entrega).click()
     })
 })
