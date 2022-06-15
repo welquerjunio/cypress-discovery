@@ -1,7 +1,7 @@
 // Teste de Cadastro de entregador
 import signup from '../pages/SignupPage'
 
-describe('Cadastro', ()=>{
+describe('Signup', ()=>{
 
     beforeEach(function(){
         cy.fixture('deliver').then((d)=>{
@@ -9,7 +9,7 @@ describe('Cadastro', ()=>{
         })
     })
     //Caso de teste 1
-    it('Usuário deve se tornar um entregador', function(){
+    it('User should be deliver', function(){
         signup.go()
         signup.fillForm(this.deliver.signup)
         signup.submit()
@@ -18,7 +18,7 @@ describe('Cadastro', ()=>{
         signup.modalContentShouldBe(expectedMessage)   
     })
     //Caso de teste 2
-    it('CPF incorreto', function(){
+    it('Incorrect document', function(){
         signup.go()
         signup.fillForm(this.deliver.cpf_inv)
         signup.submit()
