@@ -31,6 +31,22 @@
         "delivery_method": "Moto",
         "cnh":"cnh-digital.jpg"
 
+    },
+    "email_inv":{
+        "nome": "Fernando Papito",
+        "cpf": "00000000078",
+        "email": "papito.com.br",
+        "whatsapp": "11999999999",
+        "address":{
+            "postalcode": "04534011",
+            "street": "Rua Joaquim Floriano",
+            "number": "1000",
+            "details": "Ap 142",
+            "district": "Itaim Bibi",
+            "city_state": "São Paulo/SP"
+        },
+        "delivery_method": "Moto",
+        "cnh":"cnh-digital.jpg"
     }
 
 }

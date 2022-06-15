@@ -6,7 +6,7 @@ class SignupPage {
         cy.get('#page-deliver form h1').should('have.text', 'Cadastre-se para  fazer entregas')
     }
     fillForm(deliver){
-        cy.get('input[name="name"]').type(deliver.nome)
+        cy.get('input[name="fullName"]').type(deliver.nome)
         cy.get('input[name="cpf"]').type(deliver.cpf)
         cy.get('input[name="email"]').type(deliver.email)
         cy.get('input[name="whatsapp"]').type(deliver.whatsapp)

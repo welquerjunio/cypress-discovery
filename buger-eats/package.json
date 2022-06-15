@@ -10,6 +10,9 @@
   "license": "MIT",
   "devDependencies": {
     "cypress": "^9.5.3",
-    "cypress-file-upload": "^5.0.8"
+    "cypress-file-upload": "^5.0.8",
+    "fake": "^0.2.2",
+    "faker": "^5.5.3",
+    "gerador-validador-cpf": "^5.0.2"
   }
 }
