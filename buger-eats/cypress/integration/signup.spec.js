@@ -1,6 +1,7 @@
 //Caso de Teste: Cadastro de entregador
 import signup from '../pages/SignupPage'
 import signupFactory from '../factories/SignupFactory'
+import SignupPage from '../pages/SignupPage'
 
 describe('Signup', ()=>{
 
@@ -11,7 +12,7 @@ describe('Signup', ()=>{
     //})
 
     //Canário de teste 1
-    it('User should be deliver', function(){
+    it.skip('User should be deliver', function(){
         var deliver = signupFactory.deliver()
 
         signup.go()
@@ -22,7 +23,7 @@ describe('Signup', ()=>{
         signup.modalContentShouldBe(expectedMessage)   
     })
     //Cenário de teste 2
-    it('Incorrect document', function(){
+    it.skip('Incorrect document', function(){
         var deliver = signupFactory.deliver()
         deliver.cpf = '000000000aa'
 
@@ -33,7 +34,7 @@ describe('Signup', ()=>{
         
     })
     // Cenário de Teste 3
-    it('Incorrect email', function(){
+    it.skip('Incorrect email', function(){
         var deliver = signupFactory.deliver()
         deliver.email = 'user.com.br'
 
@@ -42,5 +43,17 @@ describe('Signup', ()=>{
         signup.submit()
         signup.alertMessageShouldBe('Oops! Email com formato inválido.')
         
+    })
+    // Cenário de Teste 4
+    it('Required fields', function(){
+        SignupPage.go()
+        SignupPage.submit()
+        SignupPage.alertMessageShouldBe('É necessário informar o nome')
+        SignupPage.alertMessageShouldBe('É necessário informar o CPF')
+        SignupPage.alertMessageShouldBe('É necessário informar o email')
+        SignupPage.alertMessageShouldBe('É necessário informar o CEP')
+        SignupPage.alertMessageShouldBe('É necessário informar o número do endereço')
+        SignupPage.alertMessageShouldBe('Selecione o método de entrega')
+        SignupPage.alertMessageShouldBe('Adicione uma foto da sua CNH')
     })
 })
