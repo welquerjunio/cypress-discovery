@@ -30,7 +30,7 @@ describe('Signup', ()=>{
         SignupPage.submit()
         SignupPage.alertMessageShouldBe('Oops! CPF inválido')
         
-    })
+    }) 
     // Cenário de Teste 3
     it('Incorrect email', function(){
         var deliver = signupFactory.deliver()
