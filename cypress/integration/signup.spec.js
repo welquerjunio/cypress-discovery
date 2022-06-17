@@ -1,4 +1,4 @@
-//Caso de Teste: Cadastro de entregador
+//Caso de Teste: Cadastro de entregador.
 import signupFactory from '../factories/SignupFactory'
 import SignupPage from '../pages/SignupPage'
 
