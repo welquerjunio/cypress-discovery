@@ -1,3 +1,4 @@
+#automatizado
 name: Cypress Regression Tests
 
 on: [push]
